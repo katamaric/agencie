@@ -1,6 +1,6 @@
 body {
-  display: initial;
-  place-items: initial;
+  display: initial !important;
+  place-items: initial !important;
 }
 
 nav ul {

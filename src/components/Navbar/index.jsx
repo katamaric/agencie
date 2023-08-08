@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import LightToggle from '../LightToggle';
 import './navbar.css';
 
 const Navbar = () => {
@@ -18,6 +19,8 @@ const Navbar = () => {
           <Link to="/works">Works</Link>
         </li>
       </ul>
+
+      <LightToggle />
     </nav>
   );
 };

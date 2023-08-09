@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
 const LightToggle = () => {
-  const [isLight, setIsLight] = useState(true);
+  const [isLight, setIsLight] = useState(
+    localStorage.getItem("isLight") === "true"
+  );
 
   useEffect(() => {
     if (isLight) {
-      document.documentElement.classList.add('light')
+      document.documentElement.classList.add('light');
+      localStorage.setItem("isLight", "true");
     } else {
-      document.documentElement.classList.remove('light')
+      document.documentElement.classList.remove('light');
+      localStorage.setItem("isLight", "false");
     } 
   }, [isLight]);
 
